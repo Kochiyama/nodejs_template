@@ -1,0 +1,11 @@
+{
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "endOfLine": "auto",
+  "semi": false,
+  "proseWrap": "preserve",
+  "singleQuote": true,
+  "useTabs": false,
+  "trailingComma": "es5",
+  "tabWidth": 2
+}
