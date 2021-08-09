@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import './config/env';
 import express, { NextFunction, Request, Response } from 'express';
 import './database';
 import routes from './routes';
