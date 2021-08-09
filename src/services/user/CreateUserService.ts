@@ -1,5 +1,5 @@
-import IUserRepository from '../../repositories/IUserRepository';
-import UserRepository from '../../repositories/UserRepository';
+import IUserRepository from '../../repositories/user/IUserRepository';
+import UserRepository from '../../repositories/user/UserRepository';
 import { hash } from 'bcrypt';
 import User from '../../models/User';
 import AppError from '../../errors/AppError';
@@ -25,7 +25,7 @@ class CreateUserService {
     if (alreadyExists) {
       throw new AppError(
         'Usuario já existe, tente logar com suas credenciais',
-        401,
+        401
       );
     }
 

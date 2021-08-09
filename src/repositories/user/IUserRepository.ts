@@ -1,5 +1,5 @@
-import { CreateUserDTO } from '../dtos/CreateUserDTO';
-import User from '../models/User';
+import { CreateUserDTO } from '../../dtos/ICreateUserDTO';
+import User from '../../models/User';
 
 export default interface IUserRepository {
   findById: (id: string) => Promise<User | undefined>;

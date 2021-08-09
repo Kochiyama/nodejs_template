@@ -1,5 +1,5 @@
-import IUserRepository from '../../repositories/IUserRepository';
-import UserRepository from '../../repositories/UserRepository';
+import IUserRepository from '../../repositories/user/IUserRepository';
+import UserRepository from '../../repositories/user/UserRepository';
 import User from '../../models/User';
 import AppError from '../../errors/AppError';
 import { compare } from 'bcrypt';

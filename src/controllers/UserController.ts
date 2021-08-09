@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import AppError from '../errors/AppError';
-import UserRepository from '../repositories/UserRepository';
+import UserRepository from '../repositories/user/UserRepository';
 import CreateUserService from '../services/user/CreateUserService';
 import ToggleActiveUserService from '../services/user/ToggleActiveUserService';
 
@@ -20,7 +20,7 @@ class UserController {
 
   public async toggleActive(
     request: Request,
-    response: Response,
+    response: Response
   ): Promise<Response> {
     const { id } = request.params;
 
