@@ -1,5 +1,7 @@
 import IUserRepository from '../repositories/IUserRepository';
 import UserRepository from '../repositories/UserRepository';
+import { hash } from 'bcrypt';
+import User from '../models/User';
 
 interface Request {
   name: string;
@@ -14,12 +16,16 @@ class CreateUserService {
     this.userRepository = userRepository;
   }
 
-  public async execute({ name, email, password }: Request) {
+  public async execute({ name, email, password }: Request): Promise<User> {
+    const passwordHash = await hash(password, 8);
+
     const user = await this.userRepository.create({
       name,
       email,
-      password,
+      password: passwordHash,
     });
+
+    return user;
   }
 }
 
