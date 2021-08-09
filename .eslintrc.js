@@ -7,7 +7,7 @@ module.exports = {
     'airbnb-base',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
-    'pçugin:prettier/recommended'
+    'plugin:prettier/recommended'
   ],
   globals: {
     Atomics: 'readonly',
@@ -29,7 +29,8 @@ module.exports = {
         "ts": "never"
       }
     ],
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "linebreak-style": ["error", "windows"]
   },
   settings: {
     "import/resolver": {
