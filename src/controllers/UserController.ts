@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import UserRepository from '../repositories/UserRepository';
-import CreateUserService from '../services/CreateUserService';
+import CreateUserService from '../services/user/CreateUserService';
 
 class UserController {
   public async create(request: Request, response: Response): Promise<Response> {

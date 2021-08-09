@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import UserRepository from '../repositories/UserRepository';
-import CreateSessionService from '../services/CreateSessionService';
+import CreateSessionService from '../services/session/CreateSessionService';
 
 class SessionController {
   public async create(request: Request, response: Response): Promise<Response> {

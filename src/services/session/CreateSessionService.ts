@@ -1,7 +1,7 @@
-import IUserRepository from '../repositories/IUserRepository';
-import UserRepository from '../repositories/UserRepository';
-import User from '../models/User';
-import AppError from '../errors/AppError';
+import IUserRepository from '../../repositories/IUserRepository';
+import UserRepository from '../../repositories/UserRepository';
+import User from '../../models/User';
+import AppError from '../../errors/AppError';
 import { compare } from 'bcrypt';
 import { sign } from 'jsonwebtoken';
 
