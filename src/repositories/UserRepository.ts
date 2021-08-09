@@ -26,6 +26,7 @@ class UserRepository implements IUserRepository {
       name,
       email,
       password,
+      active: true,
     });
 
     await this.ormRepository.save(user);
