@@ -1,4 +1,4 @@
-import { MigrationInterface, QueryRunner, Table } from 'typeorm'
+import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
 export class CreateUsers1628190119479 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
@@ -29,6 +29,7 @@ export class CreateUsers1628190119479 implements MigrationInterface {
           {
             name: 'active',
             type: 'BOOLEAN',
+            default: true,
           },
           {
             name: 'created_at',
@@ -41,11 +42,11 @@ export class CreateUsers1628190119479 implements MigrationInterface {
             default: 'now()',
           },
         ],
-      })
-    )
+      }),
+    );
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    queryRunner.dropTable('users')
+    queryRunner.dropTable('users');
   }
 }
