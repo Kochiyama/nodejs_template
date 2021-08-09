@@ -36,7 +36,7 @@ class CreateSessionService {
     }
 
     if (!user.active) {
-      throw new AppError('Usuáio inativo', 401);
+      throw new AppError('Usuário inativo', 401);
     }
 
     const token = sign({}, process.env.APP_SECRET as string, {
