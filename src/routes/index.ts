@@ -6,11 +6,7 @@ const routes = Router();
 const prefixRoutes = '/api/v1';
 
 routes.get('/', (req: Request, res: Response) =>
-  res.json({
-    name: 'Marcelo',
-    lastname: 'HK',
-    age: 17,
-  }),
+  res.json({ message: 'working!' })
 );
 
 routes.use(`${prefixRoutes}/users`, userRoutes);
